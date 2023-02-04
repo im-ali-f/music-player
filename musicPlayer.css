@@ -14,6 +14,8 @@
     --darkGray: #757a79;
     --darkGrayO: #757a79a8;
     --lightGray: #9ba6a5;
+    --lightGrayO: #d9e1e1a0;
+    --lightGrayHover:#c1d7d7a0;
     --darkGreen: #aeccc6;
     --lightGreen: #bbe9db;
 }
@@ -88,5 +90,59 @@ body{ background-color: var(--bodyColor); }
     transition: 0.4s all;
     font-size: 4.5vh;
     text-shadow: 10px 11px 13px #250c04;
-    
+}
+.musicPlayerList{
+    background-color: var(--lightGray);
+    width: 90vw;
+    height: 70vh;
+    margin: auto;
+    margin-top: 4rem;
+    border-radius: 8px;
+    padding-top: 1vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.musicContainer{
+    background-color: var(--lightGrayO);
+    width: 95%;
+    height: 7.5vh;
+    margin: auto;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: 0.4s all;
+    margin-top: 1vh;
+}
+.musicContainer:hover{
+    box-shadow: 5px 5px 13px #250c04;
+    transition: 0.4s all;
+    background-color: var(--lightGrayHover);
+}
+.musicIMG{
+    width: 6.5vh;
+    height: 6.5vh;
+    background-color: white;
+    margin-left: 1rem;
+    border-radius: 8px;
+    margin-top: 0.5vh;
+    box-shadow: 5px 5px 13px #250c04;
+}
+.musicName{
+    width: 30%;
+    font-size: 3.5vh;
+    margin-top: 1vh;
+    color: var(--lightGreen);
+}
+.musicTime{
+    width: 30%;
+    font-size: 3.5vh;
+    margin-top: 1vh;
+    color: var(--lightGreen);
+}
+.musicCounter{
+    font-size: 3.5vh;
+    margin-top: 1vh;
+    margin-right: 2vh;
+    color: rgb(197, 177, 177);
 }
