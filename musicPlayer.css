@@ -18,6 +18,7 @@
     --lightGrayHover:#c1d7d7a0;
     --darkGreen: #aeccc6;
     --lightGreen: #bbe9db;
+    --control:#79b8ac;
 }
 html { font-size: 62.5%; } 
 body{ background-color: var(--bodyColor); }
@@ -146,3 +147,161 @@ body{ background-color: var(--bodyColor); }
     margin-right: 2vh;
     color: rgb(197, 177, 177);
 }
+.controllers{
+    background-color: var(--darkGray);
+    width: 90vw;
+    height: 7vh;
+    margin: auto;
+    margin-top:3vh;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.control{
+    margin-right: 3vh;
+    font-size: 3vh;
+    color: var(--control);
+    transition: 0.4s all;
+    text-shadow: 5px 5px 13px #250c04;
+    cursor: pointer;
+}
+.volume{
+    display: flex;
+    align-items: center;
+    margin-left: 2vh;
+}
+.center{
+    display: flex;
+    align-items: center;
+    margin-left: 10vw;
+}
+.musicTimer{
+    margin-right: 2vh;
+}
+.range{
+    cursor: pointer;
+    
+}
+/*********** Baseline, reset styles ***********/
+input[name="volumeRange"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+    width: 12vw;
+  }
+  
+  /* Removes default focus */
+  input[name="volumeRange"]:focus {
+    outline: none;
+  }
+  
+  /******** Chrome, Safari, Opera and Edge Chromium styles ********/
+  /* slider track */
+  input[name="volumeRange"]::-webkit-slider-runnable-track {
+    background-color: #92d3cc;
+    border-radius: 0.5rem;
+    height: 0.5rem;
+  }
+  
+  /* slider thumb */
+  input[name="volumeRange"]::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    margin-top: -4px; /* Centers thumb on the track */
+    background-color: #078861;
+    border-radius: 0.5rem;
+    height: 1rem;
+    width: 1rem;
+  }
+  
+  input[name="volumeRange"]:focus::-webkit-slider-thumb {
+    outline: 3px solid #078861;
+    outline-offset: 0.125rem;
+  }
+  
+  /*********** Firefox styles ***********/
+  /* slider track */
+  input[name="volumeRange"]::-moz-range-track {
+    background-color: #92d3cc;
+    border-radius: 0.5rem;
+    height: 0.5rem;
+  }
+  
+  /* slider thumb */
+  input[name="volumeRange"]::-moz-range-thumb {
+    background-color: #078861;
+    border: none; /*Removes extra border that FF applies*/
+    border-radius: 0.5rem;
+    height: 1rem;
+    width: 1rem;
+  }
+  
+  input[name="volumeRange"]:focus::-moz-range-thumb{
+    outline: 3px solid #078861;
+    outline-offset: 0.125rem;
+  }
+
+
+
+
+  /*********** Baseline, reset styles ***********/
+input[name="musicTimer"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+    width: 33vw;
+  }
+  
+  /* Removes default focus */
+  input[name="musicTimer"]:focus {
+    outline: none;
+  }
+  
+  /******** Chrome, Safari, Opera and Edge Chromium styles ********/
+  /* slider track */
+  input[name="musicTimer"]::-webkit-slider-runnable-track {
+    background-color: #92d3cc;
+    border-radius: 0.5rem;
+    height: 0.5rem;
+  }
+  
+  /* slider thumb */
+  input[name="musicTimer"]::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    margin-top: -4px; /* Centers thumb on the track */
+    background-color: #078861;
+    border-radius: 0.5rem;
+    height: 1rem;
+    width: 1rem;
+  }
+  
+  input[name="musicTimer"]:focus::-webkit-slider-thumb {
+    outline: 3px solid #078861;
+    outline-offset: 0.125rem;
+  }
+  
+  /*********** Firefox styles ***********/
+  /* slider track */
+  input[name="musicTimer"]::-moz-range-track {
+    background-color: #92d3cc;
+    border-radius: 0.5rem;
+    height: 0.5rem;
+  }
+  
+  /* slider thumb */
+  input[name="musicTimer"]::-moz-range-thumb {
+    background-color: #078861;
+    border: none; /*Removes extra border that FF applies*/
+    border-radius: 0.5rem;
+    height: 1rem;
+    width: 1rem;
+  }
+  
+  input[name="musicTimer"]:focus::-moz-range-thumb{
+    outline: 3px solid #078861;
+    outline-offset: 0.125rem;
+  }
