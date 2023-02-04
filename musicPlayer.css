@@ -1,0 +1,92 @@
+*{ 
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    top: 0;
+    outline: none;
+    text-decoration: none;
+    border: none;
+}
+:root{
+    --bodyColor : #e4ecf0;
+    --fontColor:rgb(124, 213, 176);
+    --lightFontColor:#ade1d1;
+    --darkGray: #757a79;
+    --darkGrayO: #757a79a8;
+    --lightGray: #9ba6a5;
+    --darkGreen: #aeccc6;
+    --lightGreen: #bbe9db;
+}
+html { font-size: 62.5%; } 
+body{ background-color: var(--bodyColor); }
+.wholePage{
+    width: 100vw;
+    height: 100%;
+}
+.accSection{
+    margin: auto;
+    width: 90vw;
+    height: 8vh;
+    background-color: var(--darkGrayO);
+    display: flex;
+    margin-top: 2rem;
+    border-radius: 8px;
+    overflow: hidden;
+    justify-content: space-between;
+}
+.accInfo{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.profilePic{
+    width: 6vh;
+    height: 6vh;
+    background-color: #fff;
+    margin-left: 1.5vh;
+    border-radius: 100%;
+    box-shadow: 5px 5px 13px #250c04;
+    transition: 0.4s all;
+    cursor: pointer;
+}
+.profilePic:hover{
+    box-shadow: 10px 11px 13px #250c04;
+    transition: 0.4s all;
+    width: 6.3vh;
+    height: 6.3vh;
+}
+.profileName{
+    width: 15vw;
+    height: 5vh;
+    margin-right: 1.5vh;
+    font-size: 3.5vh;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.siteFont{
+    font-family: "Alfa Slab One", cursive;
+    text-transform: capitalize;
+    text-align: center;
+    color: var(--fontColor);
+    text-shadow: rgb(0, 0, 0) 2px 2px 2px;
+}
+.edit{
+    margin-right: 3vh;
+    font-size: 4vh;
+    margin-top: 1.8vh;
+    color: white;
+    transition: 0.4s all;
+    text-shadow: 5px 5px 13px #250c04;
+    cursor: pointer;
+
+}
+.edit:hover{
+    color: rgb(235, 223, 58);
+    transition: 0.4s all;
+    font-size: 4.5vh;
+    text-shadow: 10px 11px 13px #250c04;
+    
+}
