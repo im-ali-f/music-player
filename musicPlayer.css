@@ -1,307 +1,377 @@
 *{ 
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    top: 0;
-    outline: none;
-    text-decoration: none;
-    border: none;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  top: 0;
+  outline: none;
+  text-decoration: none;
+  border: none;
 }
 :root{
-    --bodyColor : #e4ecf0;
-    --fontColor:rgb(124, 213, 176);
-    --lightFontColor:#ade1d1;
-    --darkGray: #757a79;
-    --darkGrayO: #757a79a8;
-    --lightGray: #9ba6a5;
-    --lightGrayO: #d9e1e1a0;
-    --lightGrayHover:#c1d7d7a0;
-    --darkGreen: #aeccc6;
-    --lightGreen: #bbe9db;
-    --control:#79b8ac;
+  --bodyColor : #e4ecf0;
+  --fontColor:rgb(124, 213, 176);
+  --lightFontColor:#ade1d1;
+  --darkGray: #757a79;
+  --darkGrayO: #757a79a8;
+  --lightGray: #9ba6a5;
+  --lightGrayO: #d9e1e1a0;
+  --lightGrayHover:#c1d7d7a0;
+  --darkGreen: #aeccc6;
+  --darkGreenO: #aeccc6b2;
+  --lightGreen: #bbe9db;
+  --control:#79b8ac;
 }
 html { font-size: 62.5%; } 
 body{ background-color: var(--bodyColor); }
 .wholePage{
-    width: 100vw;
-    height: 100%;
+  width: 100vw;
+  height: 100%;
 }
 .accSection{
-    margin: auto;
-    width: 90vw;
-    height: 8vh;
-    background-color: var(--darkGrayO);
-    display: flex;
-    margin-top: 2rem;
-    border-radius: 8px;
-    overflow: hidden;
-    justify-content: space-between;
+  margin: auto;
+  width: 90vw;
+  height: 8vh;
+  background-color: var(--darkGrayO);
+  display: flex;
+  margin-top: 2rem;
+  border-radius: 8px;
+  overflow: hidden;
+  justify-content: space-between;
 }
 .accInfo{
-    width: 30%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  width: 30%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .profilePic{
-    width: 6vh;
-    height: 6vh;
-    background-color: #fff;
-    margin-left: 1.5vh;
-    border-radius: 100%;
-    box-shadow: 5px 5px 13px #250c04;
-    transition: 0.4s all;
-    cursor: pointer;
+  width: 6vh;
+  height: 6vh;
+  background-color: #fff;
+  margin-left: 1.5vh;
+  border-radius: 100%;
+  box-shadow: 5px 5px 13px #250c04;
+  transition: 0.4s all;
+  cursor: pointer;
 }
 .profilePic:hover{
-    box-shadow: 10px 11px 13px #250c04;
-    transition: 0.4s all;
-    width: 6.3vh;
-    height: 6.3vh;
+  box-shadow: 10px 11px 13px #250c04;
+  transition: 0.4s all;
+  width: 6.3vh;
+  height: 6.3vh;
 }
 .profileName{
-    width: 15vw;
-    height: 5vh;
-    margin-right: 1.5vh;
-    font-size: 3.5vh;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  width: 15vw;
+  height: 5vh;
+  margin-right: 1.5vh;
+  font-size: 3.5vh;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .siteFont{
-    font-family: "Alfa Slab One", cursive;
-    text-transform: capitalize;
-    text-align: center;
-    color: var(--fontColor);
-    text-shadow: rgb(0, 0, 0) 2px 2px 2px;
+  font-family: "Alfa Slab One", cursive;
+  text-transform: capitalize;
+  text-align: center;
+  color: var(--fontColor);
+  text-shadow: rgb(0, 0, 0) 2px 2px 2px;
 }
 .edit{
-    margin-right: 3vh;
-    font-size: 4vh;
-    margin-top: 1.8vh;
-    color: white;
-    transition: 0.4s all;
-    text-shadow: 5px 5px 13px #250c04;
-    cursor: pointer;
+  margin-right: 3vh;
+  font-size: 4vh;
+  margin-top: 1.8vh;
+  color: white;
+  transition: 0.4s all;
+  text-shadow: 5px 5px 13px #250c04;
+  cursor: pointer;
 
 }
 .edit:hover{
-    color: rgb(235, 223, 58);
-    transition: 0.4s all;
-    font-size: 4.5vh;
-    text-shadow: 10px 11px 13px #250c04;
+  color: rgb(235, 223, 58);
+  transition: 0.4s all;
+  font-size: 4.5vh;
+  text-shadow: 10px 11px 13px #250c04;
 }
 .musicPlayerList{
-    background-color: var(--lightGray);
-    width: 90vw;
-    height: 70vh;
-    margin: auto;
-    margin-top: 4rem;
-    border-radius: 8px;
-    padding-top: 1vh;
-    overflow-x: hidden;
-    overflow-y: auto;
+  background-color: var(--lightGray);
+  width: 90vw;
+  height: 70vh;
+  margin: auto;
+  margin-top: 4rem;
+  border-radius: 8px;
+  padding-top: 1vh;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 .musicContainer{
-    background-color: var(--lightGrayO);
-    width: 95%;
-    height: 7.5vh;
-    margin: auto;
-    border-radius: 8px;
-    display: flex;
-    justify-content: space-between;
-    cursor: pointer;
-    transition: 0.4s all;
-    margin-top: 1vh;
+  background-color: var(--lightGrayO);
+  width: 95%;
+  height: 7.5vh;
+  margin: auto;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: 0.4s all;
+  margin-top: 1vh;
 }
 .musicContainer:hover{
-    box-shadow: 5px 5px 13px #250c04;
-    transition: 0.4s all;
-    background-color: var(--lightGrayHover);
+  box-shadow: 5px 5px 13px #250c04;
+  transition: 0.4s all;
+  background-color: var(--lightGrayHover);
 }
 .musicIMG{
-    width: 6.5vh;
-    height: 6.5vh;
-    background-color: white;
-    margin-left: 1rem;
-    border-radius: 8px;
-    margin-top: 0.5vh;
-    box-shadow: 5px 5px 13px #250c04;
+  width: 6.5vh;
+  height: 6.5vh;
+  background-color: white;
+  margin-left: 1rem;
+  border-radius: 8px;
+  margin-top: 0.5vh;
+  box-shadow: 5px 5px 13px #250c04;
 }
 .musicName{
-    width: 30%;
-    font-size: 3.5vh;
-    margin-top: 1vh;
-    color: var(--lightGreen);
+  width: 30%;
+  font-size: 3.5vh;
+  margin-top: 1vh;
+  color: var(--lightGreen);
 }
 .musicTime{
-    width: 30%;
-    font-size: 3.5vh;
-    margin-top: 1vh;
-    color: var(--lightGreen);
+  width: 30%;
+  font-size: 3.5vh;
+  margin-top: 1vh;
+  color: var(--lightGreen);
 }
 .musicCounter{
-    font-size: 3.5vh;
-    margin-top: 1vh;
-    margin-right: 2vh;
-    color: rgb(197, 177, 177);
+  font-size: 3.5vh;
+  margin-top: 1vh;
+  margin-right: 2vh;
+  color: rgb(197, 177, 177);
 }
 .controllers{
-    background-color: var(--darkGray);
-    width: 90vw;
-    height: 7vh;
-    margin: auto;
-    margin-top:3vh;
-    border-radius: 8px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  background-color: var(--darkGray);
+  width: 90vw;
+  height: 7vh;
+  margin: auto;
+  margin-top:3vh;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .control{
-    margin-right: 3vh;
-    font-size: 3vh;
-    color: var(--control);
-    transition: 0.4s all;
-    text-shadow: 5px 5px 13px #250c04;
-    cursor: pointer;
+  margin-right: 3vh;
+  font-size: 3vh;
+  color: var(--control);
+  transition: 0.4s all;
+  text-shadow: 5px 5px 13px #250c04;
+  cursor: pointer;
 }
 .volume{
-    display: flex;
-    align-items: center;
-    margin-left: 2vh;
+  display: flex;
+  align-items: center;
+  margin-left: 2vh;
 }
 .center{
-    display: flex;
-    align-items: center;
-    margin-left: 10vw;
+  display: flex;
+  align-items: center;
+  margin-left: 10vw;
 }
 .musicTimer{
-    margin-right: 2vh;
+  margin-right: 2vh;
 }
 .range{
-    cursor: pointer;
-    
+  cursor: pointer;
+  
 }
 /*********** Baseline, reset styles ***********/
 input[name="volumeRange"] {
-    -webkit-appearance: none;
-    appearance: none;
-    background: transparent;
-    cursor: pointer;
-    width: 12vw;
-  }
-  
-  /* Removes default focus */
-  input[name="volumeRange"]:focus {
-    outline: none;
-  }
-  
-  /******** Chrome, Safari, Opera and Edge Chromium styles ********/
-  /* slider track */
-  input[name="volumeRange"]::-webkit-slider-runnable-track {
-    background-color: #92d3cc;
-    border-radius: 0.5rem;
-    height: 0.5rem;
-  }
-  
-  /* slider thumb */
-  input[name="volumeRange"]::-webkit-slider-thumb {
-    -webkit-appearance: none; /* Override default look */
-    appearance: none;
-    margin-top: -4px; /* Centers thumb on the track */
-    background-color: #078861;
-    border-radius: 0.5rem;
-    height: 1rem;
-    width: 1rem;
-  }
-  
-  input[name="volumeRange"]:focus::-webkit-slider-thumb {
-    outline: 3px solid #078861;
-    outline-offset: 0.125rem;
-  }
-  
-  /*********** Firefox styles ***********/
-  /* slider track */
-  input[name="volumeRange"]::-moz-range-track {
-    background-color: #92d3cc;
-    border-radius: 0.5rem;
-    height: 0.5rem;
-  }
-  
-  /* slider thumb */
-  input[name="volumeRange"]::-moz-range-thumb {
-    background-color: #078861;
-    border: none; /*Removes extra border that FF applies*/
-    border-radius: 0.5rem;
-    height: 1rem;
-    width: 1rem;
-  }
-  
-  input[name="volumeRange"]:focus::-moz-range-thumb{
-    outline: 3px solid #078861;
-    outline-offset: 0.125rem;
-  }
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  width: 12vw;
+}
+
+/* Removes default focus */
+input[name="volumeRange"]:focus {
+  outline: none;
+}
+
+/******** Chrome, Safari, Opera and Edge Chromium styles ********/
+/* slider track */
+input[name="volumeRange"]::-webkit-slider-runnable-track {
+  background-color: #92d3cc;
+  border-radius: 0.5rem;
+  height: 0.5rem;
+}
+
+/* slider thumb */
+input[name="volumeRange"]::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  margin-top: -4px; /* Centers thumb on the track */
+  background-color: #078861;
+  border-radius: 0.5rem;
+  height: 1rem;
+  width: 1rem;
+}
+
+input[name="volumeRange"]:focus::-webkit-slider-thumb {
+  outline: 3px solid #078861;
+  outline-offset: 0.125rem;
+}
+
+/*********** Firefox styles ***********/
+/* slider track */
+input[name="volumeRange"]::-moz-range-track {
+  background-color: #92d3cc;
+  border-radius: 0.5rem;
+  height: 0.5rem;
+}
+
+/* slider thumb */
+input[name="volumeRange"]::-moz-range-thumb {
+  background-color: #078861;
+  border: none; /*Removes extra border that FF applies*/
+  border-radius: 0.5rem;
+  height: 1rem;
+  width: 1rem;
+}
+
+input[name="volumeRange"]:focus::-moz-range-thumb{
+  outline: 3px solid #078861;
+  outline-offset: 0.125rem;
+}
 
 
 
 
-  /*********** Baseline, reset styles ***********/
+/*********** Baseline, reset styles ***********/
 input[name="musicTimer"] {
-    -webkit-appearance: none;
-    appearance: none;
-    background: transparent;
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  width: 33vw;
+}
+
+/* Removes default focus */
+input[name="musicTimer"]:focus {
+  outline: none;
+}
+
+/******** Chrome, Safari, Opera and Edge Chromium styles ********/
+/* slider track */
+input[name="musicTimer"]::-webkit-slider-runnable-track {
+  background-color: #92d3cc;
+  border-radius: 0.5rem;
+  height: 0.5rem;
+}
+
+/* slider thumb */
+input[name="musicTimer"]::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  margin-top: -4px; /* Centers thumb on the track */
+  background-color: #078861;
+  border-radius: 0.5rem;
+  height: 1rem;
+  width: 1rem;
+}
+
+input[name="musicTimer"]:focus::-webkit-slider-thumb {
+  outline: 3px solid #078861;
+  outline-offset: 0.125rem;
+}
+
+/*********** Firefox styles ***********/
+/* slider track */
+input[name="musicTimer"]::-moz-range-track {
+  background-color: #92d3cc;
+  border-radius: 0.5rem;
+  height: 0.5rem;
+}
+
+/* slider thumb */
+input[name="musicTimer"]::-moz-range-thumb {
+  background-color: #078861;
+  border: none; /*Removes extra border that FF applies*/
+  border-radius: 0.5rem;
+  height: 1rem;
+  width: 1rem;
+}
+
+input[name="musicTimer"]:focus::-moz-range-thumb{
+  outline: 3px solid #078861;
+  outline-offset: 0.125rem;
+}
+.editMenu{
+  position: absolute;
+  background-color: var(--darkGreenO);
+  width: 60vw;
+  height: 60vh;
+  left:20vw;
+  top: 20vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+}
+#musicFile{
+  background-color: #672323;
+  width: 40vw;
+  height: 7vh;
+  display: block;
+  padding: 2.3vh;
+  font-size: 1.7vh;
+  cursor: pointer;
+}
+#musicFile::-webkit-file-upload-button {
+  visibility: hidden;
+}
+#musicFile::before {
+  content: 'Select Music';
+  background:var(--control);
+  border-radius: 8px;
+  padding: 15px 18px;
+  -webkit-user-select: none;
+  cursor: pointer;
+}
+#resetMenuBTN{
+  color: #dd1111;
+    background-color: var(--control);
+    font-size: 3vh;
+    padding: 1vw 3vw;
+    letter-spacing: 1px;
     cursor: pointer;
-    width: 33vw;
-  }
-  
-  /* Removes default focus */
-  input[name="musicTimer"]:focus {
-    outline: none;
-  }
-  
-  /******** Chrome, Safari, Opera and Edge Chromium styles ********/
-  /* slider track */
-  input[name="musicTimer"]::-webkit-slider-runnable-track {
-    background-color: #92d3cc;
-    border-radius: 0.5rem;
-    height: 0.5rem;
-  }
-  
-  /* slider thumb */
-  input[name="musicTimer"]::-webkit-slider-thumb {
-    -webkit-appearance: none; /* Override default look */
-    appearance: none;
-    margin-top: -4px; /* Centers thumb on the track */
-    background-color: #078861;
-    border-radius: 0.5rem;
-    height: 1rem;
-    width: 1rem;
-  }
-  
-  input[name="musicTimer"]:focus::-webkit-slider-thumb {
-    outline: 3px solid #078861;
-    outline-offset: 0.125rem;
-  }
-  
-  /*********** Firefox styles ***********/
-  /* slider track */
-  input[name="musicTimer"]::-moz-range-track {
-    background-color: #92d3cc;
-    border-radius: 0.5rem;
-    height: 0.5rem;
-  }
-  
-  /* slider thumb */
-  input[name="musicTimer"]::-moz-range-thumb {
-    background-color: #078861;
-    border: none; /*Removes extra border that FF applies*/
-    border-radius: 0.5rem;
-    height: 1rem;
-    width: 1rem;
-  }
-  
-  input[name="musicTimer"]:focus::-moz-range-thumb{
-    outline: 3px solid #078861;
-    outline-offset: 0.125rem;
-  }
+    margin-top: 1.5vh;
+  transition: 0.3s all;
+
+}
+#resetMenuBTN:hover{
+  background-color:#dd1111 ;
+  color:var(--control) ;
+  transition: 0.3s all;
+
+}
+#musicMenuBTN{
+  color: #6ee80a;
+    background-color: var(--control);
+    font-size: 3vh;
+    padding: 1vw 3vw;
+    letter-spacing: 1px;
+    cursor: pointer;
+    margin-top: 1.5vh;
+  transition: 0.3s all;
+
+}
+#musicMenuBTN:hover{
+  background-color: #6ee80a;
+  color:var(--control) ;
+  transition: 0.3s all;
+}
+#formMenu{
+  display: flex;
+  flex-direction: column;
+}
