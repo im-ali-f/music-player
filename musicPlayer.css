@@ -317,6 +317,9 @@ input[name="musicTimer"]:focus::-moz-range-thumb{
   align-items: center;
   flex-direction: column;
   justify-content: space-around;
+  opacity: 0;
+  z-index: -1;
+  transition: 0.4s all;
 }
 #musicFile{
   background-color: #672323;
@@ -374,4 +377,9 @@ input[name="musicTimer"]:focus::-moz-range-thumb{
 #formMenu{
   display: flex;
   flex-direction: column;
+}
+.editMenuOp{
+  opacity: 1;
+  z-index: +2;
+  transition: 0.4s all;
 }
