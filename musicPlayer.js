@@ -9,12 +9,13 @@ addBTN.addEventListener("click",(e)=>{
     e.preventDefault()
     const musicFile=document.querySelector("#musicFile").value;
     console.log(typeof(musicFile))
-    
+    uploadFile()
 })
 async function uploadFile() {
-    let formData = new FormData(); 
+    const fileupload =document.querySelector("#musicFile")
+    let formData = new FormData();
     formData.append("file", fileupload.files[0]);
-    await fetch('/upload.php', {
+    await fetch('/musicPlayer.php', {
       method: "POST", 
       body: formData
     }); 
