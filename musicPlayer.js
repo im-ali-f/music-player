@@ -2,7 +2,6 @@ const editBTN=document.querySelector(".edit");
 editBTN.addEventListener("click",(e)=>{
     const editMenu=document.querySelector(".editMenu")
     editMenu.classList.toggle("editMenuOp")
-    console.log("#")
 })
 /* get music  and its info */
 const addBTN = document.querySelector("#musicMenuBTN")
@@ -13,14 +12,14 @@ addBTN.addEventListener("click",(e)=>{
 
 function getInfo(file) {
     let newMusic={}
-    console.log(file.name)
     let Mname=file.name;
     newMusic["name"]=Mname[0]
     newMusic["id"]=1/*fix it */
-    newMusic["duration"]=getDuration()
+    newMusic["duration"]=time
+    console.log(newMusic)
 }
 
-function getDuration() {
+
 var audio = document.createElement('audio');
 var duration=0;
 document.querySelector("#musicFile").addEventListener('change', function(event){
@@ -35,30 +34,32 @@ document.querySelector("#musicFile").addEventListener('change', function(event){
             audio.src = e.target.result;
             audio.addEventListener('loadedmetadata', function(){
                 duration = audio.duration;
-                console.log("The duration of the song is of: " + duration + " seconds");
+                let minutes = Math.floor(duration / 60);
+                let seconds = Math.floor(duration - minutes * 60);
+                time=`${minutes}:${seconds}`
             },false);
         };
         reader.readAsDataURL(file);
     }
 }, false);
-const minutes = Math.floor(duration / 60);
-const seconds = duration - minutes * 60;
-const time=`${minutes}:${seconds}`
-return time;
-}
+
+
 
 async function uploadFile() {
     const fileupload =document.querySelector("#musicFile")
-    let formData = new FormData();
-    formData.append("file", fileupload.files[0]);
-    console.log(fileupload.files[0])
-    await fetch('/musicPlayer.php', {
-      method: "POST", 
-      body: formData
-    }); 
-    getInfo(fileupload.files[0])
+    if(fileupload.files[0]){
+         let formData = new FormData();
+        formData.append("file", fileupload.files[0]);
+        await fetch('/musicPlayer.php', {
+        method: "POST", 
+        body: formData
+        }); 
+        getInfo(fileupload.files[0])
+        }
+    else{
+        return;
     }
-
+}
 whole=[{"id":1,"name":"mu1","duration":"2:34"},
 {"id":2,"name":"mu2","duration":"1:54"},
 {"id":3,"name":"mu3","duration":"0:14"},
