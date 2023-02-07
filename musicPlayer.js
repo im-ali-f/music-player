@@ -4,14 +4,49 @@ editBTN.addEventListener("click",(e)=>{
     editMenu.classList.toggle("editMenuOp")
     console.log("#")
 })
+/* get music  and its info */
 const addBTN = document.querySelector("#musicMenuBTN")
 addBTN.addEventListener("click",(e)=>{
     e.preventDefault()
-    const musicFile=document.querySelector("#musicFile").value;
-    console.log(typeof(musicFile))
     uploadFile()
-    /*call storage*/
 })
+
+function getInfo(file) {
+    let newMusic={}
+    console.log(file.name)
+    let Mname=file.name;
+    newMusic["name"]=Mname[0]
+    newMusic["id"]=1/*fix it */
+    newMusic["duration"]=getDuration()
+}
+
+function getDuration() {
+var audio = document.createElement('audio');
+var duration=0;
+document.querySelector("#musicFile").addEventListener('change', function(event){
+    var target = event.currentTarget;
+    var file = target.files[0];
+    var reader = new FileReader();
+  
+    if (target.files && file) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            audio.src = e.target.result;
+            audio.addEventListener('loadedmetadata', function(){
+                duration = audio.duration;
+                console.log("The duration of the song is of: " + duration + " seconds");
+            },false);
+        };
+        reader.readAsDataURL(file);
+    }
+}, false);
+const minutes = Math.floor(duration / 60);
+const seconds = duration - minutes * 60;
+const time=`${minutes}:${seconds}`
+return time;
+}
+
 async function uploadFile() {
     const fileupload =document.querySelector("#musicFile")
     let formData = new FormData();
@@ -21,7 +56,7 @@ async function uploadFile() {
       method: "POST", 
       body: formData
     }); 
-    alert('The file has been uploaded successfully.');
+    getInfo(fileupload.files[0])
     }
 
 whole=[{"id":1,"name":"mu1","duration":"2:34"},
