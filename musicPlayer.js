@@ -13,7 +13,7 @@ addBTN.addEventListener("click",(e)=>{
 function getInfo(file) {
     let newMusic={}
     let Mname=file.name;
-    newMusic["name"]=Mname[0]
+    newMusic["name"]=Mname.split(".")[0]
     newMusic["id"]=1/*fix it */
     newMusic["duration"]=time
     console.log(newMusic)
@@ -50,7 +50,7 @@ async function uploadFile() {
     if(fileupload.files[0]){
          let formData = new FormData();
         formData.append("file", fileupload.files[0]);
-        await fetch('/musicPlayer.php', {
+        await fetch('musicPlayer.php', {
         method: "POST", 
         body: formData
         }); 
