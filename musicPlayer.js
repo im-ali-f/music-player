@@ -6,7 +6,6 @@ editBTN.addEventListener("click",(e)=>{
 /* get music  and its info */
 const addBTN = document.querySelector("#musicMenuBTN")
 addBTN.addEventListener("click",(e)=>{
-    e.preventDefault()
     uploadFile()
 })
 
